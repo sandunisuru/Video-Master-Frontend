@@ -19,7 +19,7 @@ export class DownloadService {
       url: url
     }
 
-    return this.http.post("https://cors-anywhere.herokuapp.com/http://142.93.211.138:3000/video", data, options);
+    return this.http.post("https://videomaster.herokuapp.com/video", data, options);
 
 
   }
