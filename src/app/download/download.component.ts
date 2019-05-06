@@ -15,7 +15,7 @@ export class DownloadComponent implements OnInit {
   videoSource: string;
   duration: string;
   formats = [];
-  selectedFormat = "0";
+  selectedFormat = "1";
   selectedFormatArray= {
     filesize: '',
     url: ''
@@ -36,6 +36,8 @@ export class DownloadComponent implements OnInit {
       this.videoSource = videoData['meta'].source;
       this.formats = videoData['meta'].formats;
       this.duration = videoData['meta'].duration;
+      this.selectedFormat = videoData['meta'].formats[0].format_id;
+      this.selectedFormatArray =  videoData['meta'].formats[0];
       this.safeUrl = this.sanitizer.bypassSecurityTrustUrl(videoData['meta'].thumbnails);
       this.videoId = this.sanitizer.bypassSecurityTrustUrl("https://www.youtube.com/watch?v=" + videoData['meta'].id)
     }

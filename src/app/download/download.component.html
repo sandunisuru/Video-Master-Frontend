@@ -18,7 +18,7 @@
           (ngModelChange)="onChange($event)">
           <option [value]="0">Select your Quality..</option>
           <option *ngFor="let format of formats" [value]="format.format_id">{{format.height || "N/A"}}p -
-            {{format.ext}} - {{format.filesize}}</option>
+            {{format.ext}} - {{format.filesize}}  <span class="text-danger" *ngIf="format.acodec === 'none'">| No Audio</span><option>
         </select>
       </div>
 
