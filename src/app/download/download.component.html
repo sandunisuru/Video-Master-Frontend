@@ -24,7 +24,7 @@
 
       <p *ngIf="selectedFormatArray"><b >Size: </b>{{selectedFormatArray.filesize || "N/A" }}</p>
       <p class="lead" *ngIf="selectedFormatArray">
-        <a class="btn btn-success btn-lg" [href]="selectedFormatArray.url" role="button"><i class="fas fa-download"></i>
+        <a class="btn btn-success btn-lg" [href]="selectedFormatArray.url" [download]="videoName" target="_blank" role="button"><i class="fas fa-download"></i>
           Download</a>
         <span style="margin: 4px"></span>
         <button class="btn btn-danger btn-lg" (click)="goToHome()" role="button"><i class="far fa-plus-square"></i> Convert
