@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DownloadService } from '../download.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { SubSink } from 'subsink'
 declare var TypeIt;
 
 @Component({
@@ -15,6 +16,7 @@ export class MainComponent implements OnInit {
   downloadClicked = false;
   linkInvalid = false;
   videoInvalid = false;
+  subs = new SubSink();
 
   constructor(private download: DownloadService, private router: Router) { }
 
@@ -43,6 +45,8 @@ export class MainComponent implements OnInit {
       this.downloadClicked = true;
       this.linkInvalid = false;
       this.videoInvalid = false;
+
+      this.subs.add(
       this.download.getDownloadVideo(this.url).subscribe(data => {
         if(data["error"]){
           this.videoInvalid = true;
@@ -51,11 +55,15 @@ export class MainComponent implements OnInit {
           localStorage.setItem("videoData", JSON.stringify(data));
           this.router.navigate(['/download']);
         }
-      })
+      }));
     }else{
       this.linkInvalid = true;
     }
     
+  }
+
+  ngOnDestroy(){
+    this.subs.unsubscribe();
   }
 
 }
