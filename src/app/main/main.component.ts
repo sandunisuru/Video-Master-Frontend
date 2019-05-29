@@ -33,6 +33,9 @@ export class MainComponent implements OnInit {
     .delete()
     .type('Vimeo')
     .pause(2000)
+    .delete()
+    .type('PornHub')
+    .pause(2000)
     .go();
   }
 
@@ -40,8 +43,9 @@ export class MainComponent implements OnInit {
     var patternYoutube = /^(https?\:\/\/)?((www\.|m\.)?youtube\.com|youtu\.?be)\/.+$/;
     var patternFacebook = /^(https?\:\/\/)?((www\.)?facebook\.com\/(?:video\.php\?v=\d+|.*?\/videos\/\d+)).+$/;
     var patternVimeo = /(https?\:\/\/)?((www\.)?vimeo\.com\/(\d+)).+$/;
+    var patternPornhub = /(https?\:\/\/)?((www\.)?pornhub\.com\/(?:view_video\.php\?viewkey=\w+)).+$/
 
-    if(patternYoutube.test(this.url) || patternFacebook.test(this.url) || patternVimeo.test(this.url)){
+    if(patternYoutube.test(this.url) || patternFacebook.test(this.url) || patternVimeo.test(this.url) || patternPornhub.test(this.url)){
       this.downloadClicked = true;
       this.linkInvalid = false;
       this.videoInvalid = false;

@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
+import { ReportComponent } from './report/report.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AboutComponent } from './about/about.component';
     NavbarComponent,
     DownloadComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,
