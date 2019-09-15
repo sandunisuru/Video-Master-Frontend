@@ -4,6 +4,7 @@ import { MainComponent } from './main/main.component';
 import { DownloadComponent } from './download/download.component';
 import { AboutComponent } from './about/about.component';
 import { ReportComponent } from './report/report.component';
+import { VideolistComponent } from './videolist/videolist.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'report',
     component: ReportComponent
+  },
+  {
+    path: 'videos',
+    component: VideolistComponent
   }
 ];
 

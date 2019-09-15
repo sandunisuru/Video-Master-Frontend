@@ -23,4 +23,9 @@ export class DownloadService {
 
 
   }
+
+  getClientIPAddress(){
+   
+    return this.http.get("https://jsonip.com/");
+  }
 }
