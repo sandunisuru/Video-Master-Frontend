@@ -19,7 +19,7 @@ export class DownloadService {
       url: url
     }
 
-    return this.http.post("https://videomaster.herokuapp.com/video", data, options);
+    return this.http.post("http://localhost:3000/video", data, options);
 
 
   }

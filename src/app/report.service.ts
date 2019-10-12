@@ -14,7 +14,7 @@ export class ReportService {
       message: message
     }
 
-    return this.http.post("https://videomaster.herokuapp.com/report", data);
+    return this.http.post("http://localhost:3000/report", data);
 
   }
 }
