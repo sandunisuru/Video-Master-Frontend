@@ -9,6 +9,15 @@ This project is done as my hobby project and I thought open source it because an
 
 If you interested about that you can fork or clone it. 
 
+**Used Technlogies**
+
+ - Angular 7 (https://v7.angular.io/docs)
+ - Bootstrap 4 (https://getbootstrap.com/)
+ - Bootswatch Solar Theme ( https://bootswatch.com/solar/ )
+ - Firebase Realtime Database
+ - Firebase Hosting
+ - .TK Domain Service
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
