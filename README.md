@@ -1,6 +1,13 @@
-# Youtubedownloader
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
+
+**Video Master Youtube Downloader**
+-----------------------------------
+
+This is the Frontend Source code of the Videomaster Youtube Downloader. You can view the downloader from http://videomaster.tk/.
+
+This project is done as my hobby project and I thought open source it because anyone can learn from it.
+
+If you interested about that you can fork or clone it. 
 
 ## Development server
 
