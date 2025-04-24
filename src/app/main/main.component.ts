@@ -74,7 +74,6 @@ export class MainComponent implements OnInit {
             this.downloadClicked = false;
           } else {
             let timestamp = new Date().valueOf();
-
             const itemRef = this.db.object("all_videos/" + this.getToday() + "/" + timestamp.toString());
             itemRef.set({
               name: data["meta"].title,

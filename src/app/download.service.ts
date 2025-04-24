@@ -19,13 +19,11 @@ export class DownloadService {
       url: url
     }
 
-    return this.http.post("http://localhost:3000/video", data, options);
-
-
+    return this.http.post("http://localhost:3000/api/video", data, options);
   }
 
   getClientIPAddress(){
    
-    return this.http.get("https://jsonip.com/");
+    return this.http.get("https://api.ipify.org?format=json");
   }
 }
