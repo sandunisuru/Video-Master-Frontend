@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,9 @@ export class DownloadService {
 
   constructor(private http: HttpClient) { }
 
-  getDownloadVideo(url){
+  private baseUrl = environment.apiBaseUrl;
+
+  getDownloadVideo(url: string){
 
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -19,7 +22,7 @@ export class DownloadService {
       url: url
     }
 
-    return this.http.post("http://localhost:3000/api/video", data, options);
+    return this.http.post(`${this.baseUrl}/video`, data, options);
   }
 
   getClientIPAddress(){
